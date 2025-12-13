@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  landing:
+    image: nginx:alpine
+    volumes:
+      - ./.:/usr/share/nginx/html:ro
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.landing.rule=Host(`vendusia.com.br`,`www.vendusia.com.br`)"
+        - "traefik.http.routers.landing.entrypoints=websecure"
+        - "traefik.http.routers.landing.tls.certresolver=letsencrypt"
+        - "traefik.http.services.landing.loadbalancer.server.port=80"
+    networks:
+      - traefik_public
+
+networks:
+  traefik_public:
+    external: true
