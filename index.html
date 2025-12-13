@@ -178,22 +178,31 @@
             left: 100%;
         }
 
-        /* Image Placeholder */
-        .image-placeholder {
+       /* Image Cards */
+        .image-placeholder,
+        .image-card {
             width: 100%;
-            max-width: 600px;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 24px;
+            box-shadow: 
+                0 30px 90px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin: 40px auto;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.6);
-            text-align: center;
-            padding: 20px;
+            align-items: center;
+        }
+
+        .image-placeholder img,
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
         
         /* Principais Recursos */
@@ -648,9 +657,8 @@
             </div>
             
             <!-- ESPAÇO PARA IMAGEM DA SIMULAÇÃO -->
-            <div class="image-placeholder">
-                📸 Espaço para Imagem da Simulação<br>
-                (Substitua pela imagem do PDF)
+            <div class="image-card">
+               <img src="imagem/simulacao.png" alt="Simulação VendusIA">
             </div>
         </div>
     </section>
@@ -679,8 +687,9 @@
             </div>
             
             <!-- ESPAÇO PARA IMAGEM DO CONSULTOR -->
-            <div class="image-placeholder">
-               <img src="imagem/consultor.png" alt="Consultor VendusIA" style="width: 100%; max-width: 800px; border-radius: 20px; margin: 40px auto; display: block; box-shadow: 0 20px 60px rgba(0, 245, 255, 0.3);">
+
+            <div class="image-card">
+               <img src="imagem/consultor.png" alt="Consultor VendusIA">
             </div>
         </div>
     </section>
@@ -693,6 +702,10 @@
             <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 18px; line-height: 1.8; opacity: 0.9;">
                 <p style="margin-bottom: 30px;">A solução VendusIA também possui uma inteligência artificial especialista em análise de perfil e comportamento de times comerciais.</p>
                 <p>A análise individual de cada vendedor é realizada e a evolução pode ser acompanhada.</p>
+            </div>
+            <!-- ESPAÇO PARA IMAGEM DO RANKING -->
+            <div class="image-placeholder">
+               <img src="imagem/perfil.png" alt="Análise de Perfil VendusIA">
             </div>
         </div>
     </section>
@@ -709,8 +722,7 @@
             
             <!-- ESPAÇO PARA IMAGEM DO RANKING -->
             <div class="image-placeholder">
-                📸 Espaço para Imagem do Ranking<br>
-                (Substitua pela imagem do PDF)
+               <img src="imagem/ranking.png" alt="Ranking VendusIA">
             </div>
         </div>
     </section>
