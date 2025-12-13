@@ -2,9 +2,7 @@ version: "3.8"
 
 services:
   landing:
-    image: nginx:alpine
-    volumes:
-      - ./.:/usr/share/nginx/html:ro
+    build: .
     deploy:
       replicas: 1
       labels:
